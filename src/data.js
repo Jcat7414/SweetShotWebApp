@@ -1,0 +1,58 @@
+export const allMemories = [
+    {
+        "id": 1,
+        "date_created": "2021-09-15",
+        "club": "3 Wood",
+        "course": "City Golf Club",
+        "weather": "Sunny, Warm and Windy",
+        "memory_details": "I change the angle of the shaft to be less forward than usual, and opened the clubface up a bit more too. I'm not sure of the amount of backswing, but I tried to keep it controlled, with my left arm no higher than parallel to the ground and only a slight flex in the wrist. Took a breath first, then kept my head still and concentrated on rotating my shoulders and keeping my weight down in the legs. The result was a lovely 150m, straight shot to the front edge of the green on the 7th.",
+        "date_amended": "2021-09-15",
+        "is_current": true,
+        "owner": 1,
+    },
+    {
+        "id": 2,
+        "date_created": "2021-09-14",
+        "club": "Driver",
+        "course": "City Golf Club",
+        "weather": "Cloudy, Cold and Raining",
+        "memory_details": "I change the angle of the shaft to be less forward than usual, and opened the clubface up a bit more too. I'm not sure of the amount of backswing, but I tried to keep it controlled, with my left arm no higher than parallel to the ground and only a slight flex in the wrist. Took a breath first, then kept my head still and concentrated on rotating my shoulders and keeping my weight down in the legs. The result was a lovely 200m drive down the middle of the fairway on the 3rd.",
+        "date_amended": "2021-09-14",
+        "is_current": true,
+        "owner": 1,
+    },
+    {
+        "id": 3,
+        "date_created": "2021-09-14",
+        "club": "Putter",
+        "course": "City Golf Club",
+        "weather": "Sunny, Hot and Still",
+        "memory_details": "I putted the ball into the hole in one shot on the 1st.",
+        "date_amended": "2021-09-14",
+        "is_current": false,
+        "owner": 1,
+    },
+    {
+        "id": 4,
+        "date_created": "2021-09-21",
+        "club": "8 Iron",
+        "course": "City Golf Club",
+        "weather": "Sunny, Cool and Very Windy",
+        "memory_details": "I had unfortunately driven the ball off the tee on the 11th, onto the next fairway. Fortunately, there was no one coming down the 12th and I was able to take a moment to consider my options. There were a lot of trees between me and the 11th fairway. I had a good lie, I was in the middle of the fairway after all... The trees were low to the ground, so going under was not a good option. Going over, seemed the only option other than hitting down the 12th fairway further..but, I didn't want to risk ending up on the 13th. I recalled that I had hit a couple of nice high shots in the past with my 8 iron, so I decided to give it a go. I have been trying to work on keeping my hands lower, beneath my shoulders, rather than reaching out towards the ball. With this in mind, I centered the ball between my feet, relaxed my hands a little on the grip, then had a full backswing, keeping my eye on the ball. I did my best not to hesitate or slow down through the swing. The club connected well with the ball and it sailed up and over the trees, landing on the 11th fairway. Exactly what I had pictured in my head.",
+        "date_amended": "2021-09-21",
+        "is_current": true,
+        "owner": 1,
+    }
+];
+
+export const oneMemory = {
+    "id": 1,
+    "date_created": "2021-09-15",
+    "club": "3 Wood",
+    "course": "City Golf Club",
+    "weather": "Sunny, Warm and Windy",
+    "memory_details": "I change the angle of the shaft to be less forward than usual, and opened the clubface up a bit more too. I'm not sure of the amount of backswing, but I tried to keep it controlled, with my left arm no higher than parallel to the ground and only a slight flex in the wrist. Took a breath first, then kept my head still and concentrated on rotating my shoulders and keeping my weight down in the legs. The result was a lovely 150m, straight shot to the front edge of the green on the 7th.",
+    "date_amended": "2021-09-15",
+    "is_current": true,
+    "owner": 1,
+}

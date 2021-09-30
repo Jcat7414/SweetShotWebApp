@@ -1,7 +1,15 @@
 import React from "react";
+import { allMemories } from "../data";
+import MemoryCard from "../components/MemoryCard/MemoryCard";
 
 function HomePage() {
-    return <h1>This is the Sweet Shot Home Page.</h1>;
+    return (
+        <div id="memory-list">
+            {allMemories.map((memoryData, key) => {
+                return <MemoryCard key={key} memoryData={memoryData} />;
+            })}
+        </div>
+    );
 }
 
 export default HomePage;
