@@ -4,6 +4,7 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage";
 import MemoryPage from "./pages/MemoryPage";
+import SignInPage from "./pages/SignInPage";
 
 function App() {
   return (
@@ -12,10 +13,16 @@ function App() {
         <Nav />
 
         <Switch>
-          <Route path="/memory">
-            <MemoryPage />
+          <Route path="/memory/:id" component={ MemoryPage }>
+           
           </Route>
-          <Route path="/">
+          <Route path="/memory" exact>
+            <HomePage />
+          </Route>
+          <Route path="/signin">
+            <SignInPage />
+          </Route>
+          <Route path="/" exact>
             <HomePage />
           </Route>
         </Switch>
