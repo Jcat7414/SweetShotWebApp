@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 function MemoryPage() {
     const [memoryData, setMemoryData] = useState([]);
-    const id = useParams;
+    const { id } = useParams();
     console.log(id)
     console.log(memoryData)
 
