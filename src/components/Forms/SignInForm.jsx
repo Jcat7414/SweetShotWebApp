@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 
 function SignInForm() {
     const [credentials, setCredentials] = useState ({
         username: "",
         password: "",
+        userid: "",
     });
+
+    const history = useHistory();
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -15,6 +19,8 @@ function SignInForm() {
     };
 
     const postData = async() => {
+        const username = window.localStorage.getItem("username")
+
         const response = await fetch(
             `${process.env.REACT_APP_API_URL}api-token-auth/`,
             {
@@ -32,7 +38,9 @@ function SignInForm() {
         e.preventDefault();
         if (credentials.username && credentials.password) {
             postData().then((response) => {
-                console.log(response.json());
+                window.localStorage.setItem("token", response.token);
+                window.localStorage.setItem("user", credentials.username);
+                history.push("/memorybank");
             });
         }
     };
@@ -40,16 +48,16 @@ function SignInForm() {
     return (
         <form>
             <div>
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="username">Name</label>
                 <input
                     type="text"
                     id="username"
-                    placeholder="Enter Username"
+                    placeholder="Enter your name"
                     onChange={handleChange}
                 />
             </div>
             <div>
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="password">Password</label>
                 <input
                     type="password"
                     id="password"
@@ -57,6 +65,7 @@ function SignInForm() {
                     onChange={handleChange}
                 />
             </div>
+            <p>Forgot your password?</p>
             <button type="submit" onClick={handleSubmit}>Sign In</button>
         </form>
     );

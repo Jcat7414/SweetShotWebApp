@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MemoryCard from "../components/MemoryCard/MemoryCard";
+import Header from "../components/Menu/Header";
 
 function MemoryBankPage() {
     const [memoryList, setMemoryList] = useState([]);
@@ -20,10 +21,15 @@ function MemoryBankPage() {
     }, []);
 
     return (
-        <div id="memory-list">
-            {memoryList.map((memoryData, key) => {
-                return <MemoryCard key={key} memoryData={memoryData} />;
-            })}
+        <div>
+            <div>
+            <Header />
+            </div>
+            <div id="memory-list">
+                {memoryList.map((memoryData, key) => {
+                    return <MemoryCard key={key} memoryData={memoryData} />;
+                })}
+            </div>
         </div>
     );
 }

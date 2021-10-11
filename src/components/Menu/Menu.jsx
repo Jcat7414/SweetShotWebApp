@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/sweet-shot-logo-cursive-horizontal.svg";
 
-function Nav() {
+function Menu() {
     return (
         <div>
-            <div><Link to="/">Home</Link></div>
+            <div><Link to="/"><img src={ Logo } width="200px" /></Link></div>
             <div><Link to="capturememory/">Capture a Memory</Link></div>
             <div><Link to="/memorybank">View Memory Bank</Link></div>
             <div><Link to="/userprofile">User Profile</Link></div>
@@ -18,4 +19,4 @@ function Nav() {
     );
 }
 
-export default Nav;
+export default Menu;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect }  from "react";
-import { useParams } from "react-router-dom";
+import { Link , useParams } from "react-router-dom";
+import Header from "../components/Menu/Header";
 
 function MemoryPage() {
     const [memoryData, setMemoryData] = useState([]);
@@ -23,13 +24,16 @@ function MemoryPage() {
 
     return (
         <div>
-            <h2>Club:</h2>
-            <p>{ memoryData.club }</p>
-            <h3>Memory occured on { memoryData.shot_date }</h3>
-            <h3>{`Status: ${ memoryData.is_current }`}</h3>
-            <h3>Course: { memoryData.course }</h3>
-            <h3>Weather: { memoryData.weather }</h3>
-            <p>{ memoryData.memory_details }</p>
+            <Header />
+            <div>
+                <h2>Club:</h2>
+                <p>{ memoryData.club }</p>
+                <h3>Memory occured on { memoryData.shot_date }</h3>
+                <h3>{`Status: ${ memoryData.is_current }`}</h3>
+                <h3>Course: { memoryData.course }</h3>
+                <h3>Weather: { memoryData.weather }</h3>
+                <p>{ memoryData.memory_details }</p>
+            </div>
         </div>
     );
 }

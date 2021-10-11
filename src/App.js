@@ -1,12 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Nav from "./components/Nav/Nav";
+import Menu from "./components/Menu/Menu";
 import HomePage from "./pages/HomePage";
 import InstructionsPage from "./pages/InstructionsPage";
+import SignUpPage from "./pages/SignUpPage";
+import SignInPage from "./pages/SignInPage";
+import SignOutPage from "./pages/SignOutPage";
 import MemoryBankPage from "./pages/MemoryBankPage";
 import MemoryPage from "./pages/MemoryPage";
-import SignInPage from "./pages/SignInPage";
 
 function App() {
   return (
@@ -15,19 +17,25 @@ function App() {
 
         <Switch>
           <Route path="/menu">
-            <Nav />
+            <Menu />
           </Route>
           <Route path="/instructions">
             <InstructionsPage />
           </Route>
-          <Route path="/memory/:id">
-            <MemoryPage />
+          <Route path="/signup">
+            <SignUpPage />
+          </Route>
+          <Route path="/signin">
+            <SignInPage />
+          </Route>
+          <Route path="/signout">
+            <SignOutPage />
           </Route>
           <Route path="/memorybank" exact>
             <MemoryBankPage />
           </Route>
-          <Route path="/signin">
-            <SignInPage />
+          <Route path="/memory/:id">
+            <MemoryPage />
           </Route>
           <Route path="/" exact>
             <HomePage />

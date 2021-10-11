@@ -1,26 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/sweet-shot-logo-cursive-horizontal.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Header from "../components/Menu/Header";
+
 
 function InstructionsPage() {
-    const hamburger = <FontAwesomeIcon icon={faBars} />
+
     return (
         <div>
-            <div className="logo-signed-out">
-                <Link to="/"><img src={ Logo } width="200px"></img></Link>
-                <p>capture the ones worth remembering</p>
-            </div>
-            <div className="logo-signed-in">
-                <div>
-                    <Link to="/"><img src={ Logo } width="200px"></img></Link>
-                    <p>capture the ones worth remembering</p>
-                </div>
-                <div>
-                <Link to="/menu">{ hamburger }</Link>
-                </div>
-            </div>
+            <Header />
             <div>
                 <h5>How Sweet Shot works</h5>
                 <div className="instructions-list">
@@ -29,7 +16,7 @@ function InstructionsPage() {
                             <ul>
                                 <li>Click 'Sign Up'</li>
                                 <li>Enter your Email</li>
-                                <li>Enter your User Name</li>
+                                <li>Enter your Name</li>
                                 <li>Enter a Password (minimum 8 characters)</li>
                                 <li>Re-enter the password</li>
                                 <li>Click the checkbox to accept the Terms and Conditions</li>
