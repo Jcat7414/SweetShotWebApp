@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Logo from "../assets/sweet-shot-logo-cursive.svg";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,7 @@ function HomePage() {
     return (
         <div id="home-screen">
             <div className="sweet-shot-logo">
-                <img src={ Logo } width="300px"></img>
+                <img src={ Logo } width="300px" alt="Sweet Shot Logo"></img>
                 <p>capture the ones worth remembering</p>
             </div>
             <div className="purpose-paragraph">

@@ -11,13 +11,13 @@ function Header() {
     return (
         <div>
             <div className="logo-signed-out">
-                <Link to="/"><img src={ Logo } width="200px"></img></Link>
+                <Link to="/"><img src={ Logo } width="200px" alt="Sweet Shot Logo"></img></Link>
             </div>
             <div>
                 <p>capture the ones worth remembering</p>
             </div>
             <div className="logo-signed-in">
-                <Link to="/"><img src={ Logo } width="200px"></img></Link>
+                <Link to="/"><img src={ Logo } width="200px" alt="Sweet Shot Logo"></img></Link>
                 <div>
                     <p>capture the ones worth remembering</p>
                 </div>

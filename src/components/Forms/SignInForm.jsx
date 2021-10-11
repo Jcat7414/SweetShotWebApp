@@ -19,8 +19,6 @@ function SignInForm() {
     };
 
     const postData = async() => {
-        const username = window.localStorage.getItem("username")
-
         const response = await fetch(
             `${process.env.REACT_APP_API_URL}api-token-auth/`,
             {

@@ -7,6 +7,7 @@ import InstructionsPage from "./pages/InstructionsPage";
 import SignUpPage from "./pages/SignUpPage";
 import SignInPage from "./pages/SignInPage";
 import SignOutPage from "./pages/SignOutPage";
+import MemoryCapturePage from './pages/MemoryCapturePage';
 import MemoryBankPage from "./pages/MemoryBankPage";
 import MemoryPage from "./pages/MemoryPage";
 
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/signout">
             <SignOutPage />
+          </Route>
+          <Route path="/memorycapture">
+            <MemoryCapturePage />
           </Route>
           <Route path="/memorybank" exact>
             <MemoryBankPage />

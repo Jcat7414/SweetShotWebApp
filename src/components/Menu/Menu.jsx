@@ -5,8 +5,8 @@ import Logo from "../../assets/sweet-shot-logo-cursive-horizontal.svg";
 function Menu() {
     return (
         <div>
-            <div><Link to="/"><img src={ Logo } width="200px" /></Link></div>
-            <div><Link to="capturememory/">Capture a Memory</Link></div>
+            <div><Link to="/"><img src={ Logo } width="200px" alt="Sweet Shot Logo" /></Link></div>
+            <div><Link to="memorycapture/">Capture a Memory</Link></div>
             <div><Link to="/memorybank">View Memory Bank</Link></div>
             <div><Link to="/userprofile">User Profile</Link></div>
             <div><Link to="/settings">Settings</Link></div>

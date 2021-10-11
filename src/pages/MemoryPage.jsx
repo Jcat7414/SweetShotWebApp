@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from "react";
-import { Link , useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Header from "../components/Menu/Header";
 
 function MemoryPage() {
@@ -33,7 +33,10 @@ function MemoryPage() {
                 <h3>Course: { memoryData.course }</h3>
                 <h3>Weather: { memoryData.weather }</h3>
                 <p>{ memoryData.memory_details }</p>
+                <Link to="memoryedit">Edit Memory</Link>
             </div>
+            <Link to="/memorycapture">Capture a Memory</Link>
+            <Link to="/memorybank">View Memory Bank</Link>
         </div>
     );
 }
