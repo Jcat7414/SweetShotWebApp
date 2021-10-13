@@ -1,6 +1,7 @@
 import React from "react";
-import SignUpForm from "../components/Forms/SignUpForm";
 import Header from "../components/Menu/Header";
+import SignUpForm from "../components/Forms/SignUpForm";
+import SignInLink from "../components/Buttons/SignInLink";
 
 function SignUpPage() {
     return (
@@ -13,6 +14,7 @@ function SignUpPage() {
                 <p>Start capturing your <i>Sweet Shot</i> memories today by creating your own Memory Bank.</p>
             </div>
             <SignUpForm />
+            <SignInLink />
         </div>
     );
 }

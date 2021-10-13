@@ -79,14 +79,6 @@ function SignUpForm() {
             />
                 <label htmlFor="terms">I agree to the Terms and Conditions</label>
             <button type="submit" onClick={handleSubmit}>Sign Up</button>
-            <Link to="/signin">Already Signed Up? Sign In</Link>
-
-            <br/>
-
-            <p>Email: {user.email} </p>
-            <p>Username: {user.username}</p>
-            <p>Password: {user.password}</p>
-            <p>Terms: {user.terms ? "true" : "false"}</p>
         </form>
     );
 }

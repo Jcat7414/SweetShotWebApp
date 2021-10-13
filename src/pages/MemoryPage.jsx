@@ -1,6 +1,8 @@
 import React, { useState, useEffect }  from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../components/Menu/Header";
+import CaptureMemoryButton from "../components/Buttons/CaptureMemoryButton";
+import ViewMemoryButton from "../components/Buttons/ViewMemoryButton";
 
 function MemoryPage() {
     const [memoryData, setMemoryData] = useState([]);
@@ -35,8 +37,8 @@ function MemoryPage() {
                 <p>{ memoryData.memory_details }</p>
                 <Link to="memoryedit">Edit Memory</Link>
             </div>
-            <Link to="/memorycapture">Capture a Memory</Link>
-            <Link to="/memorybank">View Memory Bank</Link>
+            <CaptureMemoryButton />
+            <ViewMemoryButton />
         </div>
     );
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import Logo from "../assets/sweet-shot-logo-cursive.svg";
 import { Link } from "react-router-dom";
+import SignInButton from "../components/Buttons/SignInButton";
+import SignUpLink from "../components/Buttons/SignUpLink";
 
 function HomePage() {
 
@@ -26,13 +28,11 @@ function HomePage() {
                 most appropriate memory via your phone, using <i>Sweet Shot</i>.</p>
                 <p>Happy Golfing!</p>
             </div>
-            <div className="instructions-button">
-                <Link to="/instructions"><button className="button-full-width-primary">How Sweet Shot works</button></Link>
+            <div>
+                <Link to="/instructions"><button id="primarybtn">How Sweet Shot works</button></Link>
             </div>
-            <div className="sign-in-button">
-                <Link to="/signin"><button className="button-full-width-secondary">Sign In</button></Link>
-                <Link to="/signup">New? Sign Up</Link>
-            </div>
+            <SignInButton />
+            <SignUpLink />
         </div>
     );
 }

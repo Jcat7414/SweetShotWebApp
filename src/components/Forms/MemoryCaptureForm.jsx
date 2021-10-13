@@ -8,9 +8,7 @@ function MemoryCaptureForm() {
         "course": "",
         "weather": "",
         "memory_details": "",
-        "date_created": "",
-        "date_amended": "",
-        "is_current": ""
+        "is_current": true,
     });
 
     const handleChange = (e) => {
@@ -118,33 +116,7 @@ function MemoryCaptureForm() {
                             onChange={handleChange}
                         />
                 </div>
-                <div>
-                    <input
-                        type="checkbox"
-                        id="is_current"
-                        required
-                        onChange={handleChange}
-                    />
-                        <label htmlFor="is_current">Add this Memory to my Memory Bank</label>
-                </div>
-                <div>
-                    <label htmlFor="date_created">Date Created - temporary, to be created by default</label>
-                        <input
-                            type="date"
-                            id="date_created"
-                            required
-                            onChange={handleChange}
-                        />
-                </div>
-                <div>
-                    <label htmlFor="date_amended">Date Amended - temporary, to be created by default</label>
-                        <input
-                            type="date"
-                            id="date_amended"
-                            required
-                            onChange={handleChange}
-                        />
-                </div>
+
                 <div>
                     <button type="submit" onClick={handleSubmit}>Save Memory</button>
                     <button type="cancel" onClick={handleCancel}>Cancel</button>

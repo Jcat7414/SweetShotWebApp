@@ -64,7 +64,7 @@ function SignInForm() {
                 />
             </div>
             <p>Forgot your password?</p>
-            <button type="submit" onClick={handleSubmit}>Sign In</button>
+            <button type="submit" id="primarybtn" onClick={handleSubmit}>Sign In</button>
         </form>
     );
 }
