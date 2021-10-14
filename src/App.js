@@ -14,7 +14,7 @@ import MemoryPage from "./pages/MemoryPage";
 function App() {
   return (
     <Router>
-      <div>
+      <div className="container">
 
         <Switch>
           <Route path="/menu">

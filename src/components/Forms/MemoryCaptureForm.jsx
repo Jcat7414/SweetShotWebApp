@@ -43,7 +43,6 @@ function MemoryCaptureForm() {
         .then((response) => {
             window.localStorage.setItem("memory_id", response.id);
             window.localStorage.setItem("club", memory.club);
-
             history.push("/memorybank");
         });
     };

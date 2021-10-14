@@ -10,10 +10,10 @@ html {
 
 .container {
   overflow: auto;
-  width: 320px;
-  max-width: 320px;
+  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 5px 20px;
 }
 
 img {
@@ -31,8 +31,8 @@ input[type=submit],
 input[type=cancel],
 input[type=button] {
   display: inline-block;
-  margin: 1.5vw auto;
-  padding: 3px 30px;
+  margin: 8px auto 4px;
+  padding: 3px 10px;
   width: 260px;
   color: #FFFFFF;
   text-align: center;
@@ -45,7 +45,6 @@ input[type=button] {
   border: 0px solid #669966;
   cursor: pointer;
   box-sizing: border-box;
-  transition: all 0.2s ease;
 }
 @media (max-width: 320px) {
   .button,
