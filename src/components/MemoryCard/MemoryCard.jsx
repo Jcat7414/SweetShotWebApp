@@ -1,6 +1,4 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import "./MemoryCard.css";
 
 function MemoryCard(props) {
     const { memoryData } = props;

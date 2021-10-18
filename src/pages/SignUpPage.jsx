@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/Menu/Header";
 import SignUpForm from "../components/Forms/SignUpForm";
 import SignInLink from "../components/Buttons/SignInLink";

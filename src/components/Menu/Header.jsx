@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/sweet-shot-logo-cursive-horizontal.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

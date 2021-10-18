@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from "react-router-dom";
 import SignOutForm from '../components/Forms/SignOutForm';
 import Header from '../components/Menu/Header';

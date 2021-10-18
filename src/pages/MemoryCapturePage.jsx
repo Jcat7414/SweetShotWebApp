@@ -1,4 +1,3 @@
-import React from "react";
 import MemoryCaptureForm from "../components/Forms/MemoryCaptureForm";
 import Header from "../components/Menu/Header";
 

@@ -1,6 +1,5 @@
-import React from "react";
 import Header from "../components/Menu/Header";
-import SignInButton from "../components/Buttons/SignInButton";
+// import SignInButton from "../components/Buttons/SignInButton";
 import SignUpLink from "../components/Buttons/SignUpLink";
 import CaptureMemoryButton from "../components/Buttons/CaptureMemoryButton";
 import ViewMemoryButton from "../components/Buttons/ViewMemoryButton";
@@ -63,7 +62,7 @@ function InstructionsPage() {
                     </ol>
                 </div>
             </div>
-            <SignInButton />
+            {/* <SignInButton /> */}
             <SignUpLink />
             <CaptureMemoryButton />
             <ViewMemoryButton />

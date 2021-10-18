@@ -39,6 +39,7 @@ input[type=button] {
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
+  transition: transform 0.3s ease;
   white-space: nowrap;
   background-color: #669966;
   border-radius: 25px;
@@ -69,37 +70,37 @@ input[type=button]:hover,
 input[type=button]:active,
 input[type=button]:focus {
   border: 1px solid #669966;
+  transform: translateY(-3px);
   cursor: pointer;
 }
 
-#primarybtn {
+.primarybtn {
   background: #669966;
   color: #FFFFFF;
 }
 
-#primarybtn:hover {
+.primarybtn:hover {
   border: 1px solid #669966;
-  cursor: pointer;
 }
 
-#secondarybtn {
+.secondarybtn {
   background: #9CC5A1;
   color: #FFFFFF;
   border: 0px solid #9CC5A1;
 }
 
-#secondarybtn:hover {
+.secondarybtn:hover {
   border: 1px solid #9CC5A1;
 }
 
-#tertiarybtn {
+.tertiarybtn {
   background: #DCE1DE;
   color: #669966;
   border: 0px solid #DCE1DE;
   width: 160px;
 }
 
-#tertiarybtn:hover {
+.tertiarybtn:hover {
   border: 1px solid #DCE1DE;
   cursor: pointer;
 }

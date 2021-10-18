@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import CaptureMemoryButton from "../components/Buttons/CaptureMemoryButton";
 import MemoryCard from "../components/MemoryCard/MemoryCard";
 import Header from "../components/Menu/Header";

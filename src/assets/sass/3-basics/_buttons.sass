@@ -12,6 +12,7 @@ input[type="button"]
     font-size: 18px
     font-weight: 500
     text-decoration: none
+    transition: transform 0.3s ease
     white-space: nowrap
     background-color: $primary
     border-radius: 25px
@@ -25,31 +26,31 @@ input[type="button"]
     &:active,
     &:focus
         border: 1px solid $primary
+        transform: translateY(-3px)
         cursor: pointer
 
 //primary buttons are full width and are for the desired action, this is the default button
-#primarybtn
+.primarybtn
     background: $primary
     color: $light
-#primarybtn:hover
+.primarybtn:hover
     border: 1px solid $primary
-    cursor: pointer
 
 // secondary buttons are full width and are for the less desired action
-#secondarybtn
+.secondarybtn
     background: $secondary
     color: $light
     border: 0px solid $secondary
-#secondarybtn:hover
+.secondarybtn:hover
     border: 1px solid $secondary
 
 // tertiary buttons are narrower and designed to sit on a coloured block
-#tertiarybtn
+.tertiarybtn
     background: $tertiary
     color: $primary
     border: 0px solid $tertiary
     width: 160px
 
-#tertiarybtn:hover
+.tertiarybtn:hover
     border: 1px solid $tertiary
     cursor: pointer

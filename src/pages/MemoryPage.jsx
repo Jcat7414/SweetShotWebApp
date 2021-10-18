@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from "react";
+import { useState, useEffect }  from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../components/Menu/Header";
 import CaptureMemoryButton from "../components/Buttons/CaptureMemoryButton";
