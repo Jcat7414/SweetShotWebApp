@@ -1,6 +1,6 @@
 import Header from "../components/Menu/Header";
 import { Button } from "../components/Buttons/Button";
-import { Links, mainLink } from "../components/Buttons/Link";
+import { Links } from "../components/Buttons/Link";
 import CaptureMemoryButton from "../components/Buttons/CaptureMemoryButton";
 import ViewMemoryButton from "../components/Buttons/ViewMemoryButton";
 

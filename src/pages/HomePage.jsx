@@ -2,8 +2,11 @@ import Logo from "../assets/sweet-shot-logo-cursive.svg";
 // import { Link } from "react-router-dom";
 import { Links } from "../components/Buttons/Link";
 import { Button } from "../components/Buttons/Button";
+import { useContext } from "react";
+import { UserContext } from "../UserContext";
 
 function HomePage() {
+    const { user } = useContext(UserContext);
 
     return (
         <div id="home-screen">
@@ -11,6 +14,7 @@ function HomePage() {
                 <img src={ Logo } width="300px" alt="Sweet Shot Logo"></img>
                 <p>capture the ones worth remembering</p>
             </div>
+            <pre>Hi {JSON.stringify(user, null, 2)}</pre>
             <div className="purpose-paragraph">
                 <p>Whether you are a beginner or a professional, 
                 one of the best ways to hit a sweet golf shot, 
