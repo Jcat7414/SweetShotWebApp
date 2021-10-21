@@ -1,7 +1,7 @@
 import Logo from "../assets/sweet-shot-logo-cursive.svg";
-import { Link } from "react-router-dom";
-import SignUpLink from "../components/Buttons/SignUpLink";
-import { Button } from "../components/Buttons/SignInButton";
+// import { Link } from "react-router-dom";
+import { Links } from "../components/Buttons/Link";
+import { Button } from "../components/Buttons/Button";
 
 function HomePage() {
 
@@ -28,16 +28,28 @@ function HomePage() {
                 <p>Happy Golfing!</p>
             </div>
             <div>
-                <Link to="/instructions"><button id="primarybtn">How Sweet Shot works</button></Link>
+                <Button
+                    type="button"
+                    buttonStyle="primarybtn"
+                    title="How Sweet Shot works"
+                    link="/instructions"
+                />
             </div>
-            <Button 
-                // onClick={() => {console.log("You Clicked on Me!")}}
-                buttonStyle="primarybtn"
-                title="Sign In"
-                link="/signin"
-                type="button"
-            ></Button>
-            <SignUpLink />
+            <div>
+                <Button 
+                    type="button"
+                    buttonStyle="primarybtn"
+                    title="Sign In"
+                    link="/signin"
+                    // onClick={() => {console.log("You Clicked on Me!")}}
+                />
+            </div>
+            <div>
+                <Links
+                    link="/signup"
+                    linkStyle="darkLink"
+                >New? Sign Up</Links>
+            </div>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import Header from "../components/Menu/Header";
 import SignInForm from "../components/Forms/SignInForm";
-import SignUpLink from "../components/Buttons/SignUpLink";
+import { Links } from "../components/Buttons/Link";
 
 function SignInPage() {
     return (
@@ -10,7 +10,7 @@ function SignInPage() {
             <p>Ready to capture a new <i>Sweet Shot</i> memory or take a stroll down memory lane?</p>
             <p>Sign in to access your <i>Sweet Shot</i> Memory Bank</p>
             <SignInForm />
-            <SignUpLink />
+            <Links link="/signup" linkStyle="darkLink">New? Sign Up</Links>
         </div>
     );
 }

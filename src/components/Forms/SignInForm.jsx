@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
+import { Button } from "../Buttons/Button";
 
 function SignInForm() {
     const [credentials, setCredentials] = useState ({
@@ -64,7 +65,7 @@ function SignInForm() {
                 />
             </div>
             <p>Forgot your password?</p>
-            <button type="submit" id="primarybtn" onClick={handleSubmit}>Sign In</button>
+            <Button type="submit" buttonStyle="primarybtn" onClick={handleSubmit} title="Sign In" />
         </form>
     );
 }

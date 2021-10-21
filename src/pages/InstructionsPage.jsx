@@ -1,6 +1,6 @@
 import Header from "../components/Menu/Header";
-// import SignInButton from "../components/Buttons/SignInButton";
-import SignUpLink from "../components/Buttons/SignUpLink";
+import { Button } from "../components/Buttons/Button";
+import { Links, mainLink } from "../components/Buttons/Link";
 import CaptureMemoryButton from "../components/Buttons/CaptureMemoryButton";
 import ViewMemoryButton from "../components/Buttons/ViewMemoryButton";
 
@@ -62,8 +62,16 @@ function InstructionsPage() {
                     </ol>
                 </div>
             </div>
-            {/* <SignInButton /> */}
-            <SignUpLink />
+            <Button 
+                type="button"
+                buttonStyle="primarybtn"
+                title="Sign In"
+                link="/signin"
+            />
+            <Links
+                link="/signup"
+                linkStyle="darkLink"
+            >New? Sign Up</Links>
             <CaptureMemoryButton />
             <ViewMemoryButton />
         </div>
