@@ -38,6 +38,10 @@ function HomePage() {
                     title="How Sweet Shot works"
                     link="/instructions"
                 />
+
+                <Button link="/instructions">I am a link</Button>
+                <Button onClick={() => window.alert('test')}>I am button</Button>
+                
             </div>
             <div>
                 <Button 

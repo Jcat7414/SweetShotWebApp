@@ -7,18 +7,14 @@ import { Link } from "react-router-dom";
 //     "signUp",
 //     "signUpForm",
 //     "capture",
-//     "saveMemory", 
+//     "saveMemory",
 //     "cancel",
-//     "view", 
+//     "view",
 //     "editMemory",
 //     "signOut",
 // ]
 
-const STYLES = [
-    "primarybtn",
-    "secondarybtn",
-    "tertiarybtn",
-]
+const STYLES = ["primarybtn", "secondarybtn", "tertiarybtn"];
 
 // let instructions = { title: "How Sweet Shot works", type: "button", link: "/instructions" }
 // let signIn = { title: "Sign In", type: "button", link: "/signin" }
@@ -36,40 +32,36 @@ const STYLES = [
 
 // let signOut = { title: "Sign Out", type: "button", link: "/signout" }
 
-export const Button = (
-    {
-        onClick,
-        buttonStyle,
-        title,
-        link,
-        type,
-    } ) => {
+export const Button = ({
+	onClick,
+	buttonStyle,
+	title,
+	link,
+	children,
+	type,
+}) => {
+	const checkButtonStyle = STYLES.includes(buttonStyle)
+		? buttonStyle
+		: STYLES[0];
+	// const checkButtonName =
+	// BUTTONNAMES.includes(buttonName) ?
+	// buttonName :
+	// BUTTONNAMES[0]
+	// ;
 
-    const checkButtonStyle = 
-    STYLES.includes(buttonStyle) ? 
-    buttonStyle :
-    STYLES[0]
-    ;
-
-    // const checkButtonName = 
-    // BUTTONNAMES.includes(buttonName) ?
-    // buttonName :
-    // BUTTONNAMES[0]
-    // ;
-
-    return (
-        <div>
-            {/* {buttonName.map((details) => ( */}
-                <Link to={link}>
-                    <button
-                        type={type}
-                        className={`btn ${checkButtonStyle}`}
-                        onClick={onClick}
-                    >
-                        {title}
-                    </button>
-                </Link> 
-            {/* ))} */}
-        </div>
-    )
+	return (
+			<button
+				type={type || "button"}
+				className={buttonStyle ? `btn ${checkButtonStyle}` : STYLES[0]}
+				onClick={onClick}
+			>
+				{link ? (
+					<Link to={link} className="buttonLink">
+						{children}
+					</Link>
+				) : (
+					children
+				)}
+			</button>	
+	);
 };

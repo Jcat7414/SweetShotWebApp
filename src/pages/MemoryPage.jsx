@@ -6,9 +6,8 @@ import ViewMemoryButton from "../components/Buttons/ViewMemoryButton";
 
 function MemoryPage() {
     const [memoryData, setMemoryData] = useState([]);
+    const { club, shot_date, is_current, course, weather, memory_details } = memoryData;
     const { id } = useParams();
-    console.log(id)
-    console.log(memoryData)
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}memory/${id}/`, {
@@ -29,12 +28,12 @@ function MemoryPage() {
             <Header />
             <div>
                 <h2>Club:</h2>
-                <p>{ memoryData.club }</p>
-                <h3>Memory occured on { memoryData.shot_date }</h3>
-                <h3>{`Status: ${ memoryData.is_current }`}</h3>
-                <h3>Course: { memoryData.course }</h3>
-                <h3>Weather: { memoryData.weather }</h3>
-                <p>{ memoryData.memory_details }</p>
+                <p>{ club }</p>
+                <h3>Memory occured on { shot_date }</h3>
+                <h3>{`Status: ${ is_current }`}</h3>
+                <h3>Course: { course }</h3>
+                <h3>Weather: { weather }</h3>
+                <p>{ memory_details }</p>
                 <Link to="memoryedit">Edit Memory</Link>
             </div>
             <CaptureMemoryButton />
