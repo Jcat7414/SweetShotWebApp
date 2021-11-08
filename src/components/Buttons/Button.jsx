@@ -50,18 +50,18 @@ export const Button = ({
 	// ;
 
 	return (
-			<button
-				type={type || "button"}
-				className={buttonStyle ? `btn ${checkButtonStyle}` : STYLES[0]}
-				onClick={onClick}
-			>
-				{link ? (
-					<Link to={link} className="buttonLink">
-						{children}
-					</Link>
-				) : (
-					children
-				)}
-			</button>	
+		<button
+			type={type || "button"}
+			className={buttonStyle ? `btn ${checkButtonStyle}` : STYLES[0]}
+			onClick={onClick}
+		>
+			{link ? (
+				<Link to={link} className="buttonLink">
+					{children}
+				</Link>
+			) : (
+				children
+			)}
+		</button>
 	);
 };
