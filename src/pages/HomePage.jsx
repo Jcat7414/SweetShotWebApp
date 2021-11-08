@@ -1,8 +1,12 @@
-import React from "react";
 import Logo from "../assets/sweet-shot-logo-cursive.svg";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Links } from "../components/Buttons/Link";
+import { Button } from "../components/Buttons/Button";
+import { useContext } from "react";
+import { UserContext } from "../UserContext";
 
 function HomePage() {
+    const { user } = useContext(UserContext);
 
     return (
         <div id="home-screen">
@@ -10,6 +14,7 @@ function HomePage() {
                 <img src={ Logo } width="300px" alt="Sweet Shot Logo"></img>
                 <p>capture the ones worth remembering</p>
             </div>
+            <pre>Hi {JSON.stringify(user, null, 2)}</pre>
             <div className="purpose-paragraph">
                 <p>Whether you are a beginner or a professional, 
                 one of the best ways to hit a sweet golf shot, 
@@ -26,12 +31,32 @@ function HomePage() {
                 most appropriate memory via your phone, using <i>Sweet Shot</i>.</p>
                 <p>Happy Golfing!</p>
             </div>
-            <div className="instructions-button">
-                <Link to="/instructions"><button className="button-full-width-primary">How Sweet Shot works</button></Link>
+            <div>
+                <Button
+                    type="button"
+                    buttonStyle="primarybtn"
+                    title="How Sweet Shot works"
+                    link="/instructions"
+                />
+
+                <Button link="/instructions">I am a link</Button>
+                <Button onClick={() => window.alert('test')}>I am button</Button>
+                
             </div>
-            <div className="sign-in-button">
-                <Link to="/signin"><button className="button-full-width-secondary">Sign In</button></Link>
-                <Link to="/signup">New? Sign Up</Link>
+            <div>
+                <Button 
+                    type="button"
+                    buttonStyle="primarybtn"
+                    title="Sign In"
+                    link="/signin"
+                    // onClick={() => {console.log("You Clicked on Me!")}}
+                />
+            </div>
+            <div>
+                <Links
+                    link="/signup"
+                    linkStyle="darkLink"
+                >New? Sign Up</Links>
             </div>
         </div>
     );

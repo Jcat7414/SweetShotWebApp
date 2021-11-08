@@ -1,0 +1,28 @@
+html
+    // border-box box model allows us to add padding and border to our elements without increasing ***
+    box-sizing: border-box
+    background: $light
+    color: $dark
+
+    // WHAT IS THIS?
+    // We inherit box-sizing: border-box; from our <html> selector
+    // Apparently this is a bit better than appling box-sizing: border-box;
+    // directly to the ***
+
+* *:before *:after
+    box-sizing: inherit
+
+.container
+    overflow: auto
+    width: 300px
+    max-width: 300px
+    margin: 0 auto
+    padding: 5px 20px
+
+img
+    max-width: 100% 
+    align-items: center
+
+.containerWide
+    max-width: 320px
+    

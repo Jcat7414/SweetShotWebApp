@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import CaptureMemoryButton from "../components/Buttons/CaptureMemoryButton";
 import MemoryCard from "../components/MemoryCard/MemoryCard";
 import Header from "../components/Menu/Header";
 
@@ -31,7 +31,7 @@ function MemoryBankPage() {
                     return <MemoryCard key={key} memoryData={memoryData} />;
                 })}
             </div>
-            <Link to="/memorycapture">Capture a Memory</Link>
+            <CaptureMemoryButton />
         </div>
     );
 }

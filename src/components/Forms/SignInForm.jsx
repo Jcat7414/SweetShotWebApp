@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
 import { useHistory } from "react-router";
+import { Button } from "../Buttons/Button";
+import { UserContext } from "../../UserContext";
 
 function SignInForm() {
+    const { setUser } = useContext(UserContext);
+
     const [credentials, setCredentials] = useState ({
         username: "",
         password: "",
@@ -36,6 +40,7 @@ function SignInForm() {
         e.preventDefault();
         if (credentials.username && credentials.password) {
             postData().then((response) => {
+                setUser(credentials.username);
                 window.localStorage.setItem("token", response.token);
                 window.localStorage.setItem("user", credentials.username);
                 history.push("/memorybank");
@@ -64,7 +69,7 @@ function SignInForm() {
                 />
             </div>
             <p>Forgot your password?</p>
-            <button type="submit" onClick={handleSubmit}>Sign In</button>
+            <Button type="submit" buttonStyle="primarybtn" onClick={handleSubmit} title="Sign In" />
         </form>
     );
 }

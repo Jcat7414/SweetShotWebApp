@@ -1,0 +1,56 @@
+.button,
+button,
+input[type="submit"],
+input[type="cancel"],
+input[type="button"]
+    display: inline-block
+    margin: 8px auto 4px
+    padding: 3px 10px
+    width: 260px
+    color: $light
+    text-align: center
+    font-size: 18px
+    font-weight: 500
+    text-decoration: none
+    transition: transform 0.3s ease
+    white-space: nowrap
+    background-color: $primary
+    border-radius: 25px
+    border: 0px solid $primary
+    cursor: pointer
+    box-sizing: border-box
+    @media (max-width: 320px)
+        display: block
+
+    &:hover,
+    &:active,
+    &:focus
+        border: 1px solid $primary
+        transform: translateY(-3px)
+        cursor: pointer
+
+//primary buttons are full width and are for the desired action, this is the default button
+.primarybtn
+    background: $primary
+    color: $light
+.primarybtn:hover
+    border: 1px solid $primary
+
+// secondary buttons are full width and are for the less desired action
+.secondarybtn
+    background: $secondary
+    color: $light
+    border: 0px solid $secondary
+.secondarybtn:hover
+    border: 1px solid $secondary
+
+// tertiary buttons are narrower and designed to sit on a coloured block
+.tertiarybtn
+    background: $tertiary
+    color: $primary
+    border: 0px solid $tertiary
+    width: 160px
+
+.tertiarybtn:hover
+    border: 1px solid $tertiary
+    cursor: pointer

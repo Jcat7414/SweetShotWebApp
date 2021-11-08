@@ -1,6 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../components/Menu/Header";
+import { Button } from "../components/Buttons/Button";
+import { Links } from "../components/Buttons/Link";
+import CaptureMemoryButton from "../components/Buttons/CaptureMemoryButton";
+import ViewMemoryButton from "../components/Buttons/ViewMemoryButton";
 
 
 function InstructionsPage() {
@@ -60,14 +62,18 @@ function InstructionsPage() {
                     </ol>
                 </div>
             </div>
-            <div className="sign-in-button">
-                <Link to="/signin"><button className="button-full-width-secondary">Sign In</button></Link>
-                <Link to="/signup">New? Sign Up</Link>
-            </div>
-            <div className="memory-button">
-                <Link to="/capturememory"><button className="button-full-width-primary">Capture a Memory</button></Link>
-                <Link to="/memorybank"><button className="button-full-width-secondary">View Memory Bank</button></Link>
-            </div>            
+            <Button 
+                type="button"
+                buttonStyle="primarybtn"
+                title="Sign In"
+                link="/signin"
+            />
+            <Links
+                link="/signup"
+                linkStyle="darkLink"
+            >New? Sign Up</Links>
+            <CaptureMemoryButton />
+            <ViewMemoryButton />
         </div>
     );
 }
